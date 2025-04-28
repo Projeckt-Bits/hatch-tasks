@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  position: relative;
+  justify-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+.main {
+  position: relative;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-row-start: 2;
+}
+
+.navBar {
+  position: relative;
+  height: 4vw;
+  margin-top: 1vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.81vw;
+}
+
+.brandName {
+  position: relative;
+  margin-left: 1.5vw;
+}
+.settingsBtn {
+  position: relative;
+  margin-right: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3vw;
+  height: 3vw;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 0.5vw;
+  
+}
+.settingsIcon {
+  position: relative;
+  width: 2vw;
+  height: auto;
+}
+.tasksHolderHeader {
+  position: relative;
+  padding: 1vw;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.63);
+}
+.tasksHolder {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.137);
+  border-radius: 15px;
+}
+.tasksContainer {
+  position: relative;
+  height: 30vw;
+  overflow-y: auto;
+}

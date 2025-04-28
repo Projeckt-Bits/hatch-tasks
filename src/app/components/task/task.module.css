@@ -1,0 +1,141 @@
+.taskCard {
+  position: relative;
+  height: 7.5vw;
+  width: inherit;
+  margin: 1.2vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.81vw;
+  padding: 0.5vw;
+}
+.taskPriority {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.308);
+  height: 6.45vw;
+  width: 3vw;
+  border-radius: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.utmostPriority {
+  position: relative;
+  width: 1vw;
+  height: 1vw;
+  background-color: rgba(255, 0, 0, 0.36);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.utmostPriority:hover {
+  background-color: rgba(255, 0, 0, 0.63);
+}
+.moderatePriority {
+  position: relative;
+  width: 1vw;
+  height: 1vw;
+  background-color: rgba(255, 255, 0, 0.36);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.moderatePriority:hover {
+  background-color: rgba(255, 255, 0, 0.63);
+}
+.easyPriority {
+  position: relative;
+  width: 1vw;
+  height: 1vw;
+  background-color: rgba(0, 255, 0, 0.36);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.easyPriority:hover {
+  background-color: rgba(0, 255, 0, 0.63);
+}
+.taskInfo {
+  position: relative;
+  left: -2vw;
+  width: 24vw;
+}
+.taskName {
+  position: relative;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+.taskDesc {
+  position: relative;
+  margin-left: 1vw;
+}
+
+.timer {
+  position: relative;
+  left: 1.5vw;
+  height: 6.45vw;
+  width: 19.35vw;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.timer .Icon {
+  margin: 1.5vw;
+  animation: rotation 3s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 90deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  75% {
+    rotate: 270deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+.timerText {
+  position: relative;
+}
+.timer p {
+  color: #0d1324;
+}
+
+.completeBtn, .deleteBtn {
+  position: relative;
+  margin-bottom: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 0.5vw;
+  transition: all ease-in-out 300ms;
+  cursor: pointer;
+}
+.completeBtn {
+    background-color: rgba(108, 255, 108, 0.45);
+}
+.completeBtn:hover {
+  background-color: rgba(72, 255, 72, 0.63);
+}
+.deleteBtn {
+    background-color: rgba(255, 108, 108, 0.45);
+}
+
+.deleteBtn:hover {
+  background-color: rgba(255, 72, 72, 0.63);
+}
+.Icon {
+  position: relative;
+  width: 2vw;
+  height: auto;
+}
