@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 import Styles from "./page.module.css";
-import SettingsIcon from "../../public/assets/images/vectors/SettingsIcon.svg";
 import NavBar from "./components/navBar/page";
 import Task from "./components/task/page";
+import ActionBar from "./components/actionBar/page";
 
 export default function Home() {
   const today = new Date();
@@ -11,6 +13,41 @@ export default function Home() {
   const day = String(today.getDate()).padStart(2, "0");
 
   const formattedDate = `${year}-${month}-${day}`;
+
+  const [tasks, setTasks] = useState([]);
+
+  // Toggle or assign priority (1-3), sort after update
+  const handlePriorityChange = (id, newPriority) => {
+    if (tasks!=null) {
+      const updatedTasks = tasks.map((task) =>
+      task.id === id
+        ? {
+            ...task,
+            priority: task.priority === newPriority ? 0 : newPriority,
+          }
+        : task
+    );
+
+    const sortedTasks = updatedTasks.sort((a, b) => b.priority - a.priority);
+    setTasks(sortedTasks);
+    }
+};
+
+  // Add task from dialog (default priority: 0)
+  const handleAddTask = ({ taskName, taskDescription, startTime, endTime }) => {
+    const newTask = {
+      id: Date.now(),
+      taskName,
+      taskDescription,
+      priority: 0,
+      startTime,
+      endTime,
+    };
+
+    const updatedTasks = [...tasks, newTask];
+    const sortedTasks = updatedTasks.sort((a, b) => b.priority - a.priority);
+    setTasks(sortedTasks);
+  };
 
   return (
     <div className={Styles.page}>
@@ -21,28 +58,23 @@ export default function Home() {
             <h1>Your Tasks: ({formattedDate})</h1>
           </div>
           <div className={Styles.tasksContainer}>
-          <Task
-            taskName="Complete Homework"
-            taskDescription="Finish maths assignment before 5 PM. Then go to dance class and finish some more things off."
-          />
-          <Task
-            taskName="Complete Homework"
-            taskDescription="Finish maths assignment before 5 PM."
-          />
-          <Task
-            taskName="Complete Homework"
-            taskDescription="Finish maths assignment before 5 PM."
-          />
-          <Task
-            taskName="Complete Homework"
-            taskDescription="Finish maths assignment before 5 PM."
-          />
-          <Task
-            taskName="Complete Homework"
-            taskDescription="Finish maths assignment before 5 PM."
-          />
+            {tasks.map((task) => (
+              <Task
+                key={task.id}
+                taskName={task.taskName}
+                taskDescription={task.taskDescription}
+                priority={task.priority}
+                startTime={task.startTime}
+                endTime={task.endTime}
+                onChangePriority={(newPriority) =>
+                  handlePriorityChange(task.id, newPriority)
+                }
+              />
+            ))}
           </div>
         </div>
+        {/* Pass handleAddTask to ActionBar */}
+        <ActionBar onAddTask={handleAddTask} />
       </main>
     </div>
   );

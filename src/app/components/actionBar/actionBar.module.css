@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.actionBar {
+  position: sticky;
+  height: 4vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.81vw;
+}
+.taskBtn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+/*.leftBorder {
+  position: relative;
+  top: 3vw;
+  left: 0.6vw;
+  width: 2vw;
+  height: 2vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px 200px 0px 0px;
+  -webkit-border-radius: 0px 200px 0px 0px;
+  -moz-border-radius: 0px 200px 0px 0px;
+}
+.rightBorder {
+  position: relative;
+  top: 3vw;
+  right: 2.1vw;
+  width: 2vw;
+  height: 2vw;
+  background-color: #0d1324;
+}*/
+.addTaskBtn {
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.36);
+  border-radius: 0.5vw;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.addTaskBtn:hover {
+  background-color: rgba(255, 255, 255, 0.63);
+}
+.addIcon {
+  position: relative;
+  width: 2vw;
+  height: auto;
+}
+
+.addTaskDialog {
+  position: fixed;
+  width: 30vw;
+  height: 30vw;
+  top: 54.7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 0.5vw;
+  z-index: 10;
+}
+.headDiv {
+  position: relative;
+  padding: 1vw;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.63);
+}
+.taskDetails {
+  position: relative;
+  padding: 1vw;
+}
+.taskNameInput, .taskDescInput, .startTimeInput, .endTimeInput {
+  position: relative;
+  height: 3vw;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5vw;
+  margin-bottom: 0.5vw;
+  border-radius: 0.5vw;
+}
+.buttonsDiv {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.submitBtn {
+  position: relative;
+  padding: 1vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+.cancelBtn {
+  position: relative;
+  padding: 1vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 0.5vw;
+  cursor: pointer;
+}

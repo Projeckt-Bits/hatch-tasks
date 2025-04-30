@@ -27,10 +27,10 @@
 .main {
   position: relative;
   width: 60vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  justify-content: space-evenly;
 }
 
 .navBar {
