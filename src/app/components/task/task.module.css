@@ -139,3 +139,56 @@
   width: 2vw;
   height: auto;
 }
+.addTaskDialog {
+  position: fixed;
+  width: 30vw;
+  height: 30vw;
+  top: 54.7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 0.5vw;
+  z-index: 10;
+}
+.headDiv {
+  position: relative;
+  padding: 1vw;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.63);
+}
+.taskDetails {
+  position: relative;
+  padding: 1vw;
+}
+.taskNameInput, .taskDescInput, .startTimeInput, .endTimeInput {
+  position: relative;
+  height: 3vw;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5vw;
+  margin-bottom: 0.5vw;
+  border-radius: 0.5vw;
+}
+.buttonsDiv {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.submitBtn {
+  position: relative;
+  padding: 1vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+.cancelBtn {
+  position: relative;
+  padding: 1vw;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
